@@ -144,10 +144,10 @@ class ReservationList extends Component<ReservationListProps, State> {
     const res = props.items?.[toMarkingFormat(day)];
     
     if (res && res.length) {
-      return res.map((reservation: AgendaEntry, i: number) => {
+      return res.map((reservation: AgendaEntry) => {
         return {
           reservation,
-          date: i ? undefined : day
+          date: day
         };
       });
     } else if (res) {
